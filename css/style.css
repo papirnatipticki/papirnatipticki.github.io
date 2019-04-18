@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../fonts/TitilliumWeb-Regular.ttf") format("truetype"),
+    url("../fonts/TitilliumWeb-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  background-color: #262626;
+  font-family: "Titillium Web", sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  /*scroll-behavior: smooth;*/
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body {
+  opacity: 0;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+p {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 2%;
+}
+a {
+  text-decoration: none;
+}
+main img {
+  pointer-events: none;
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+header {
+  background-image: url("../img/header-bgackground.png");
+  background-repeat: repeat;
+  color: #dcdcdc;
+  background-position: center center;
+  background-attachment: fixed;
+  animation: animatedBackground 30s linear infinite alternate;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Index header */
+#header-text {
+  padding: 80px 0 80px 0;
+  text-align: justify;
+}
+#main-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Story header */
+#story-header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+#story-header-text {
+  padding: 20px 0 20px 0;
+}
+#story-header-text h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+#story-title {
+  float: left;
+}
+#story-header-menu {
+  color: #dcdcdc;
+  float: right;
+}
+#story-header-menu i {
+  font-size: 4rem;
+  line-height: 1.35;
+  vertical-align: bottom;
+}
+
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+.progress-bar {
+  height: 8px;
+  background: #4f9a4f;
+  width: 0%;
+}
+
+/* Main */
+main {
+  background-image: url("../img/background.jpg");
+  background-repeat: repeat;
+  padding: 50px 0 50px 0;
+}
+#story-main {
+  margin-top: calc(54px + 4rem);
+}
+
+/* Grid */
+.grid {
+  transition: all 0.5s ease-in-out;
+  column-gap: 20px;
+  column-fill: initial;
+}
+.grid-item {
+  display: block;
+  position: relative;
+}
+.grid .grid-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: inline-block; /* Fix the misalignment of items */
+  vertical-align: top; /* Keep the item on the very top */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.grid .grid-item img {
+  max-width: 100%;
+  vertical-align: middle;
+  backface-visibility: hidden; /* Remove Image flickering on hover */
+  transition: transform 0.3s;
+}
+.grid .grid-item:hover {
+  -webkit-filter: grayscale(0%);
+  filter: none;
+}
+.grid .grid-item:hover img {
+  -webkit-transform: scale(1.05); /* Safari and Chrome */
+  -moz-transform: scale(1.05); /* Firefox */
+  -ms-transform: scale(1.05); /* IE 9 */
+  -o-transform: scale(1.05); /* Opera */
+  transform: scale(1.05);
+}
+.grid-item .story-title {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.grid-item:hover .story-title {
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .grid {
+    column-count: 2;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .grid {
+    column-count: 3;
+  }
+}
+
+/* Footer*/
+footer {
+  background-color: #262626;
+  padding-top: 50px;
+}
+footer > * {
+  color: #999;
+}
+footer img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  width: 150px;
+  float: left;
+  margin: 6px 30px 0 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+footer img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: none;
+}
+footer h5 {
+  margin-top: 1.2rem;
+}
+footer p {
+  line-height: 25px;
+  margin: 0;
+}
+footer form {
+  padding-top: 4px;
+  margin-bottom: 0;
+}
+#bottom-footer {
+  background-color: #151515;
+  text-align: center;
+  padding: 10px;
+  margin-top: 50px;
+}
+@media (max-width: 1000px) {
+  footer .columns {
+    width: 100% !important;
+    margin: 0 0 30px 0 !important;
+  }
+  footer .column {
+    margin-left: 2%;
+    width: 49% !important;
+  }
+}
+@media (max-width: 660px) {
+  .grid-column {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-bottom: 4rem;
+  }
+  .grid-column:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 550px) {
+  footer .column {
+    margin-left: 0;
+    width: 100% !important;
+  }
+  .grid .row {
+    margin-bottom: 0 !important;
+  }
+  .story-title {
+    opacity: 1 !important;
+  }
+}
+
+/* Back to top */
+.scroll-up {
+  display: inline-block;
+  background-color: #454545;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+.scroll-up:hover {
+  cursor: pointer;
+  background-color: #666;
+}
+.scroll-up:active {
+  background-color: #222;
+}
+.scroll-up.show {
+  opacity: 0.66;
+  visibility: visible;
+}
+.scroll-up i {
+  font-size: 3em;
+  line-height: 50px;
+  color: #ccc;
+  transition: color 0.3s, opacity 0.5s, visibility 0.5s;
+}
+.scroll-up i:hover {
+  color: #fff;
+}
