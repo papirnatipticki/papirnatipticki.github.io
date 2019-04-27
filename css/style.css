@@ -74,25 +74,40 @@ header {
   top: 0;
   z-index: 1;
   width: 100%;
+  height: 9rem;
 }
-#story-header-text {
-  padding: 20px 0 20px 0;
+#story-header-grid {
+  display: grid;
+  grid-template-columns: auto 50px;
+  height: calc(9rem - 8px);
+  align-items: center;
 }
-#story-header-text h1 {
+#story-title {
   font-size: 4rem;
   margin: 0;
 }
-#story-title {
-  float: left;
-}
-#story-header-menu {
+#story-back {
   color: #dcdcdc;
-  float: right;
+  justify-self: end;
+  height: 40px;
 }
-#story-header-menu i {
+#story-back i {
   font-size: 4rem;
-  line-height: 1.35;
-  vertical-align: bottom;
+  padding-top: 3px;
+}
+@media (max-width: 730px) {
+  #story-title,
+  #story-back i {
+    font-size: 3rem;
+  }
+  #story-back {
+    height: 30px;
+  }
+}
+#story-header .container:after,
+#story-header .row:after,
+#story-header .u-cf {
+  display: none;
 }
 
 /* Progress bar */
@@ -114,7 +129,7 @@ main {
   padding: 50px 0 50px 0;
 }
 #story-main {
-  margin-top: calc(54px + 4rem);
+  margin-top: 9rem; /*calc(9rem + 8px);*/
 }
 
 /* Grid */
