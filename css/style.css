@@ -134,6 +134,10 @@ main {
 
 /* Grid */
 .grid {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   column-gap: 20px;
   column-fill: initial;
@@ -159,11 +163,15 @@ main {
   max-width: 100%;
   vertical-align: middle;
   backface-visibility: hidden; /* Remove Image flickering on hover */
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
   transition: transform 0.3s;
 }
 .grid .grid-item:hover {
   -webkit-filter: grayscale(0%);
-  filter: none;
+  filter: grayscale(0%);
 }
 .grid .grid-item:hover img {
   -webkit-transform: scale(1.05); /* Safari and Chrome */
