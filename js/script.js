@@ -31,5 +31,8 @@
   $('body').bind('paste', function (e) { e.preventDefault(); return false; });
   $('img').mousedown(function (e) { if (e.button == 2) { return false; } });
   $('a.temp').click(function (e) { e.preventDefault(); });
+  $('body').on('contextmenu', 'img', function(e) {
+    return false;
+  });
 
 }());
