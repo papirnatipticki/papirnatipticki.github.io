@@ -172,6 +172,10 @@ main {
   /*calc(9rem + 8px);*/
 }
 
+.translator {
+  margin-top: 100px;
+}
+
 /* Grid */
 
 .grid, .grid-pick {
