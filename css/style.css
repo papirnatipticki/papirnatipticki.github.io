@@ -260,6 +260,40 @@ main {
   opacity: 1;
 }
 
+.grid-item:hover .tooltip {
+  opacity: 1;
+}
+
+.grid-item .tooltip {
+  position: absolute;
+  top: 0;
+  margin: 0 auto -30px auto;
+  width: 100%;
+  height: calc(100% - 30px);
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+  background: rgba(79, 154, 79, 0.60);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.grid-item .tooltip-text {
+  padding: 10px 65px;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-shadow: 2px 1px 5px #000;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .grid {
     column-count: 2;
@@ -269,6 +303,12 @@ main {
 @media only screen and (min-width: 1024px) {
   .grid {
     column-count: 3;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 730px) {
+  .grid-item .tooltip-text {
+    padding: 10px 10px;
   }
 }
 
