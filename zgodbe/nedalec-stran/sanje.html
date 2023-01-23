@@ -12,14 +12,12 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papirnati ptički</title>
-  <meta name="description" content="Pred tabo se nahajajo kratke zgodbe, ki po letih gnezdenja čakajo, da poletijo. Seveda ne vse naenkrat, čeprav
-    bi to morda bilo nadvse enkratno. Vrstni red zgodb je naključen. Če verjameš v naključja. Na ključe in luči
-    pa le ne pozabi.">
+  <title>Sanje</title>
+  <meta name="description" content="»Hej,« tekel je za mano. Videla sem, da mi je sledil iz zgradbe. [...]">
   <meta name="author" content="Tanja Špes">
-  <meta property="og:image" content="https://papirnatipticki.github.io/img/preview.jpg">
-  <meta property="og:image:width" content="980">
-  <meta property="og:image:height" content="626">
+  <meta property="og:image" content="https://papirnatipticki.github.io/img/zgodbe/nedalec-stran/sanje.jpg">
+  <meta property="og:image:width" content="563">
+  <meta property="og:image:height" content="750">
   <meta property="og:type" content="website">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -34,39 +32,39 @@
   <header id="story-header">
     <div class="container">
       <div id="story-header-grid" class="row">
-        <h1 id="story-title">Izberi in beri</h1>
-        <a id="story-back" href="/"><i class="material-icons">close</i></a>
+        <h1 id="story-title">Sanje</h1>
+        <a id="story-back" href="/zgodbe/nedalec-stran"><i class="material-icons">close</i></a>
       </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="bar"></div>
     </div>
   </header>
 
   <main id="story-main">
     <div class="container">
-      <section class="grid-pick">
-        <div class="row">
-          <div class="one-third column">
-            <a href="/zgodbe/nedalec-stran" class="grid-item">
-              <img src="/img/zgodbe/nedalec-stran.jpg" alt="Nedaleč stran">
-              <div class="story-title">Nedaleč stran</div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/cvetovi" class="grid-item">
-              <img src="/img/zgodbe/cvetovi.jpg" alt="Cvetovi">
-              <div class="story-title">Cvetovi</div>
-              <div class="tooltip">
-                <div class="tooltip-text">Pozor! Večina zgodb, ki sledijo, ni urejenih (razlog: raje se posvečam zgodbam iz kategorije Svetovi).<br><br>Branje na lastno odgovornost.</div>
-              </div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/svetovi" class="grid-item">
-              <img src="/img/zgodbe/svetovi.jpg" alt="Svetovi">
-              <div class="story-title">Svetovi</div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <div class="row">
+        <article>
+          <p>
+            »Hej,« tekel je za mano. Videla sem, da mi je sledil iz zgradbe. Mislila sem, da sem se ga
+            znebila ob semaforju, vendar ga rdeča luč očitno ni ustavila. Je pa moral biti zares pogumen,
+            nor, ali v stiski, da je kar tako prečkal to cesto, po kateri so neslišno in hitro drveli avtomobili.
+            Pred sabo sem lahko živo videla drug scenarij – kako se raztrešči ob trku in se črni asfalt
+            obarva z rdečo njegove krvi. Ne bi bila ena od opazovalcev, ki bi v šoku stekli na kraj nesreče,
+            klicali reševalce, niti ena od tistih bolj groznih, ki bi vse to posneli in v živo prenašali po
+            spletu, ali pa zgolj polnili svoj lonec nesreče, ki ga s sabo nosijo v glavi, zato, da bi se počutili
+            manj obupane in zgrožene nad svojim lastnim življenjem. To, da bi hladnokrvno šla stran, me
+            morda naredi bolj groznega človeka od vseh omenjenih, ampak nimam časa za takšne
+            malenkosti. Lažem. Nimam živcev za takšne dogodke. Vem, da bi kasneje lahko šla v
+            Brisalnico spominov, ampak nisem ena izmed tistih, ki živi površinsko življenje, polno
+            majhnih popravkov z velikimi posledicami.
+          </p>
+          <h5 class="tbc tbc-top">Se nadaljuje ...</h5>
+          <h4 class="tbc"><a href="https://www.mladinska-knjiga.si/knjige/leposlovje/nedalec-stran"
+              target="_blank" class="book-link book-link-story">Nedaleč stran <i class="material-icons">open_in_new</i></a>
+          </h4>
+        </article>
+      </div>
     </div>
   </main>
 
@@ -115,8 +113,7 @@
     </div>
     <div id="bottom-footer">
       <span>&copy;
-        <script>document.write(new Date().getFullYear())</script> Papirnati ptički.
-      </span><br>
+        <script>document.write(new Date().getFullYear())</script> Papirnati ptički.</span><br>
       <span>Vse zgodbe in fotografije so avtorsko zaščitene.</span>
     </div>
   </footer>
@@ -125,7 +122,15 @@
 
   <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="/js/script.js"></script>
-
+  <script>
+    window.onscroll = function () { scrollIndicator() };
+    function scrollIndicator() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("bar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 
 </html>

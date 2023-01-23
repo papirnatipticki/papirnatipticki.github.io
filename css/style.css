@@ -145,6 +145,42 @@ main img {
   display: none;
 }
 
+.book-link-main-wrapper {
+  padding-bottom: 40px;
+  margin-top: -25px;
+}
+
+.book-link-main {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.book-link {
+  color: #222;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.book-link:hover {
+  color: #1952a1;
+}
+
+.book-link-main .material-icons {
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-bottom: 3px;
+}
+
+.book-link-story .material-icons {
+  font-size: 30px;
+  vertical-align: middle;
+  padding-bottom: 1px;
+}
+
 /* Progress bar */
 
 .progress-container {
@@ -174,6 +210,15 @@ main {
 
 .translator {
   margin-top: 100px;
+}
+
+.tbc {
+  text-align: center;
+}
+
+.tbc-top {
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 
 /* Grid */

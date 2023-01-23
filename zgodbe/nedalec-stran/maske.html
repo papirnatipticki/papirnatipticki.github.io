@@ -12,14 +12,13 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papirnati ptički</title>
-  <meta name="description" content="Pred tabo se nahajajo kratke zgodbe, ki po letih gnezdenja čakajo, da poletijo. Seveda ne vse naenkrat, čeprav
-    bi to morda bilo nadvse enkratno. Vrstni red zgodb je naključen. Če verjameš v naključja. Na ključe in luči
-    pa le ne pozabi.">
+  <title>Maske</title>
+  <meta name="description"
+    content="»S kakšnim namenom ste ustvarili program?« Zaviha si rokave navadne bele srajce, čeprav so že zavihani, in ne opazi, da mi je jasno, da si želi kupiti nekaj časa, zbrati misli. [...]">
   <meta name="author" content="Tanja Špes">
-  <meta property="og:image" content="https://papirnatipticki.github.io/img/preview.jpg">
-  <meta property="og:image:width" content="980">
-  <meta property="og:image:height" content="626">
+  <meta property="og:image" content="https://papirnatipticki.github.io/img/zgodbe/nedalec-stran/maske.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="532">
   <meta property="og:type" content="website">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -34,39 +33,43 @@
   <header id="story-header">
     <div class="container">
       <div id="story-header-grid" class="row">
-        <h1 id="story-title">Izberi in beri</h1>
-        <a id="story-back" href="/"><i class="material-icons">close</i></a>
+        <h1 id="story-title">Maske</h1>
+        <a id="story-back" href="/zgodbe/nedalec-stran"><i class="material-icons">close</i></a>
       </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="bar"></div>
     </div>
   </header>
 
   <main id="story-main">
     <div class="container">
-      <section class="grid-pick">
-        <div class="row">
-          <div class="one-third column">
-            <a href="/zgodbe/nedalec-stran" class="grid-item">
-              <img src="/img/zgodbe/nedalec-stran.jpg" alt="Nedaleč stran">
-              <div class="story-title">Nedaleč stran</div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/cvetovi" class="grid-item">
-              <img src="/img/zgodbe/cvetovi.jpg" alt="Cvetovi">
-              <div class="story-title">Cvetovi</div>
-              <div class="tooltip">
-                <div class="tooltip-text">Pozor! Večina zgodb, ki sledijo, ni urejenih (razlog: raje se posvečam zgodbam iz kategorije Svetovi).<br><br>Branje na lastno odgovornost.</div>
-              </div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/svetovi" class="grid-item">
-              <img src="/img/zgodbe/svetovi.jpg" alt="Svetovi">
-              <div class="story-title">Svetovi</div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <div class="row">
+        <article>
+          <p>
+            <i>
+              »S kakšnim namenom ste ustvarili program?«<br>
+              &emsp;Zaviha si rokave navadne bele srajce, čeprav so že zavihani, in ne opazi, da mi je jasno, da si želi
+              kupiti nekaj časa, zbrati misli.<br>
+              &emsp;»Zdelo se mi je pomembno ohraniti zasebnost.«<br>
+              &emsp;»Se vam zdi, da ste namen dosegli?«<br>
+              &emsp;Odviha si rokave in vprašam se, ali bo to počela ves preostanek intervjuja.<br>
+              &emsp;»Vsaka stvar je lahko ščit ali orožje.« Pogleda me naravnost v oči in nisem pripravljen na to jasno
+              modrino.<br>
+              &emsp;»Če bi vedeli, kako daleč bo šlo … Bi naredili kaj drugače?«<br>
+              &emsp;Ne odmakne pogleda, zdi se, da njene zgornje trepalnice nimajo potrebe po poljubljanju spodnjih.<br>
+              &emsp;»Bi vi – glede česar koli v življenju?« Odmaknem pogled. »Sicer pa … smo samo na prehodni točki.
+              Proces še ni zaustavljen … lahko da mi boste že čez nekaj mesecev spet ploskali … Vse je odvisno od
+              konteksta.«<br>
+              &emsp;Ugasnem magnetofon in jo še enkrat dobro pogledam. Vem, da ve, da ji nekateri ploskajo ves čas.
+            </i>
+          </p>
+          <h5 class="tbc tbc-top">Se nadaljuje ...</h5>
+          <h4 class="tbc"><a href="https://www.mladinska-knjiga.si/knjige/leposlovje/nedalec-stran"
+              target="_blank" class="book-link book-link-story">Nedaleč stran <i class="material-icons">open_in_new</i></a>
+          </h4>
+        </article>
+      </div>
     </div>
   </main>
 
@@ -115,8 +118,7 @@
     </div>
     <div id="bottom-footer">
       <span>&copy;
-        <script>document.write(new Date().getFullYear())</script> Papirnati ptički.
-      </span><br>
+        <script>document.write(new Date().getFullYear())</script> Papirnati ptički.</span><br>
       <span>Vse zgodbe in fotografije so avtorsko zaščitene.</span>
     </div>
   </footer>
@@ -125,7 +127,15 @@
 
   <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="/js/script.js"></script>
-
+  <script>
+    window.onscroll = function () { scrollIndicator() };
+    function scrollIndicator() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("bar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 
 </html>

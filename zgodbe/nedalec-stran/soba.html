@@ -12,14 +12,13 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papirnati ptički</title>
-  <meta name="description" content="Pred tabo se nahajajo kratke zgodbe, ki po letih gnezdenja čakajo, da poletijo. Seveda ne vse naenkrat, čeprav
-    bi to morda bilo nadvse enkratno. Vrstni red zgodb je naključen. Če verjameš v naključja. Na ključe in luči
-    pa le ne pozabi.">
+  <title>Soba</title>
+  <meta name="description" content="Ležala sem na hrbtu in strmela v nebo. Ne glede na to, ali sem glavo zasukala levo, desno ali
+  navzgor, je bil pogled na z zvezdami posuto nebo neizbežen. [...]">
   <meta name="author" content="Tanja Špes">
-  <meta property="og:image" content="https://papirnatipticki.github.io/img/preview.jpg">
-  <meta property="og:image:width" content="980">
-  <meta property="og:image:height" content="626">
+  <meta property="og:image" content="https://papirnatipticki.github.io/img/zgodbe/nedalec-stran/soba.jpg">
+  <meta property="og:image:width" content="750">
+  <meta property="og:image:height" content="554">
   <meta property="og:type" content="website">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -34,39 +33,43 @@
   <header id="story-header">
     <div class="container">
       <div id="story-header-grid" class="row">
-        <h1 id="story-title">Izberi in beri</h1>
-        <a id="story-back" href="/"><i class="material-icons">close</i></a>
+        <h1 id="story-title">Soba</h1>
+        <a id="story-back" href="/zgodbe/nedalec-stran"><i class="material-icons">close</i></a>
       </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="bar"></div>
     </div>
   </header>
 
   <main id="story-main">
     <div class="container">
-      <section class="grid-pick">
-        <div class="row">
-          <div class="one-third column">
-            <a href="/zgodbe/nedalec-stran" class="grid-item">
-              <img src="/img/zgodbe/nedalec-stran.jpg" alt="Nedaleč stran">
-              <div class="story-title">Nedaleč stran</div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/cvetovi" class="grid-item">
-              <img src="/img/zgodbe/cvetovi.jpg" alt="Cvetovi">
-              <div class="story-title">Cvetovi</div>
-              <div class="tooltip">
-                <div class="tooltip-text">Pozor! Večina zgodb, ki sledijo, ni urejenih (razlog: raje se posvečam zgodbam iz kategorije Svetovi).<br><br>Branje na lastno odgovornost.</div>
-              </div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/svetovi" class="grid-item">
-              <img src="/img/zgodbe/svetovi.jpg" alt="Svetovi">
-              <div class="story-title">Svetovi</div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <div class="row">
+        <article>
+          <p>
+            Ležala sem na hrbtu in strmela v nebo. Ne glede na to, ali sem glavo zasukala levo, desno ali
+            navzgor, je bil pogled na z zvezdami posuto nebo neizbežen. Zaprla sem oči, jih spet odprla in
+            se nasmehnila razgledu. Zelo zelo me je pomirjal. Zdelo se mi je, da lebdim v nekem drugem
+            svetu, zavita v odejo sreče. V odejo, ki me je ščitila pred vsakodnevnimi skrbmi, bolečino in
+            temnimi navlakami. Nekoč sem spoznala nekoga, ki mi je razlagal o ozvezdjih in mi znal
+            pokazati Medveda. Tri svetle točke, povezane še s četrto. Od takrat sem ga znala pokazati
+            tudi jaz. Spoznala sem tudi nekoga, ki sem mu pokazala Mali voz, pa me je prepričeval, da to
+            ni Mali voz in da si ga domišljam. Včasih pač moraš pustiti drugim, da ostanejo prepričani v
+            svoj prav, ker zares ne dopuščajo drugega mnenja. Meni pa se zaradi zvezd na nebu res ne
+            ljubi ubijati prijetne atmosfere. Sama pri sebi že vem, kaj je res in komu bolj zaupam.
+            Spoznala sem tudi ljudi, ki so menili, da različne zvezdnate konstelacije določajo njihovo
+            osebnost in vedenje. Ljudi, ki so astrologiji zaupali bolj kakor astronomiji ali ju niso znali
+            ločiti. Vseeno so mi bili ljubši od tistih, ki niso zaupali nikomur in ki niso znali ločevati
+            odpadkov. Tako sem ležala dosti dni, samo gledala v neskončnost neba in pustila svojim
+            mislim, da se deformirajo v sanjarjenja, zaradi katerih so zvezde žarele še močneje. Zaslišala
+            sem piskanje v levem ušesu in vedela sem, da me bo po četrtem pisku ogovoril ženski glas.
+          </p>
+          <h5 class="tbc tbc-top">Se nadaljuje ...</h5>
+          <h4 class="tbc"><a href="https://www.mladinska-knjiga.si/knjige/leposlovje/nedalec-stran"
+              target="_blank" class="book-link book-link-story">Nedaleč stran <i class="material-icons">open_in_new</i></a>
+          </h4>
+        </article>
+      </div>
     </div>
   </main>
 
@@ -115,8 +118,7 @@
     </div>
     <div id="bottom-footer">
       <span>&copy;
-        <script>document.write(new Date().getFullYear())</script> Papirnati ptički.
-      </span><br>
+        <script>document.write(new Date().getFullYear())</script> Papirnati ptički.</span><br>
       <span>Vse zgodbe in fotografije so avtorsko zaščitene.</span>
     </div>
   </footer>
@@ -125,7 +127,15 @@
 
   <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="/js/script.js"></script>
-
+  <script>
+    window.onscroll = function () { scrollIndicator() };
+    function scrollIndicator() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("bar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 
 </html>

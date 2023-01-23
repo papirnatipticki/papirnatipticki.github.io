@@ -12,14 +12,13 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papirnati ptički</title>
-  <meta name="description" content="Pred tabo se nahajajo kratke zgodbe, ki po letih gnezdenja čakajo, da poletijo. Seveda ne vse naenkrat, čeprav
-    bi to morda bilo nadvse enkratno. Vrstni red zgodb je naključen. Če verjameš v naključja. Na ključe in luči
-    pa le ne pozabi.">
+  <title>Sedmina</title>
+  <meta name="description"
+    content="Nisem si mislil, da bo lansko novo leto najino zadnje skupno. Zelo živo sem si lahko v spomin priklical njeno podobo, kako se je v bleščeči srebrni obleki široko smejala z napol polnim kozarcem penine med prsti. [...]">
   <meta name="author" content="Tanja Špes">
-  <meta property="og:image" content="https://papirnatipticki.github.io/img/preview.jpg">
-  <meta property="og:image:width" content="980">
-  <meta property="og:image:height" content="626">
+  <meta property="og:image" content="https://papirnatipticki.github.io/img/zgodbe/nedalec-stran/sedmina.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="596">
   <meta property="og:type" content="website">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -34,39 +33,41 @@
   <header id="story-header">
     <div class="container">
       <div id="story-header-grid" class="row">
-        <h1 id="story-title">Izberi in beri</h1>
-        <a id="story-back" href="/"><i class="material-icons">close</i></a>
+        <h1 id="story-title">Sedmina</h1>
+        <a id="story-back" href="/zgodbe/nedalec-stran"><i class="material-icons">close</i></a>
       </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="bar"></div>
     </div>
   </header>
 
   <main id="story-main">
     <div class="container">
-      <section class="grid-pick">
-        <div class="row">
-          <div class="one-third column">
-            <a href="/zgodbe/nedalec-stran" class="grid-item">
-              <img src="/img/zgodbe/nedalec-stran.jpg" alt="Nedaleč stran">
-              <div class="story-title">Nedaleč stran</div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/cvetovi" class="grid-item">
-              <img src="/img/zgodbe/cvetovi.jpg" alt="Cvetovi">
-              <div class="story-title">Cvetovi</div>
-              <div class="tooltip">
-                <div class="tooltip-text">Pozor! Večina zgodb, ki sledijo, ni urejenih (razlog: raje se posvečam zgodbam iz kategorije Svetovi).<br><br>Branje na lastno odgovornost.</div>
-              </div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/svetovi" class="grid-item">
-              <img src="/img/zgodbe/svetovi.jpg" alt="Svetovi">
-              <div class="story-title">Svetovi</div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <div class="row">
+        <article>
+          <p>
+            Nisem si mislil, da bo lansko novo leto najino zadnje skupno. Zelo živo sem si lahko v spomin priklical
+            njeno podobo, kako se je v bleščeči srebrni obleki široko smejala z napol polnim kozarcem penine med prsti.
+            Tako je večino časa gledala tudi na življenje – optimistično. Lahko bi prisegel, da so iskrice v njenih očeh
+            svetile močneje kakor tiste, ki smo jih prižgali namesto ognjemeta, ampak nič od tega zdaj ni bilo pomembno.
+            Videla ni ničesar več, kakor nisem jaz videl ničesar v praznem svetu tam zunaj. V to sem bil nekako
+            prisiljen, saj nisem imel niti zaves, s katerimi bi lahko zakril grdo opustošeno okolico. Vse je bilo
+            prekrito s prahom, rjavim peskom in prezirom. Edino, kar se je premikalo na ulicah, so bili kosi plastičnih
+            vreč, s katerimi se je prerekal veter. Od dreves so ostala zgolj gola debla in veje, zelenice so se umaknile
+            naključnim šopom trave, ki jih nihče ni imel volje pokositi. Pravzaprav, če sem dobro pomislil, bi morda
+            celo želel biti na njenem mestu, mrtev. Mrtev, kakor je bilo mrtvo vse okoli mene. Žal mi svet ni pustil
+            niti te izbire. Mesa je primanjkovalo in jedli smo lahko zgolj meso, ki je to postalo po naravni poti.
+            Trupla, ki so bila produkt samomorov ali umorov, smo zavrgli. Raztrgale so jih tiste redke živali, ki so
+            preživele vso to suhoparnost in odsotnost ljubezni ter se niso pustile ujeti. Tiste, ki so se znašle in si
+            izborile kaj več od obranih kosti.
+          </p>
+          <h5 class="tbc tbc-top">Se nadaljuje ...</h5>
+          <h4 class="tbc"><a href="https://www.mladinska-knjiga.si/knjige/leposlovje/nedalec-stran"
+              target="_blank" class="book-link book-link-story">Nedaleč stran <i class="material-icons">open_in_new</i></a>
+          </h4>
+        </article>
+      </div>
     </div>
   </main>
 
@@ -125,7 +126,15 @@
 
   <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="/js/script.js"></script>
-
+  <script>
+    window.onscroll = function () { scrollIndicator() };
+    function scrollIndicator() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("bar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 
 </html>

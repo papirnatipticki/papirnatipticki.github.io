@@ -12,14 +12,12 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papirnati ptički</title>
-  <meta name="description" content="Pred tabo se nahajajo kratke zgodbe, ki po letih gnezdenja čakajo, da poletijo. Seveda ne vse naenkrat, čeprav
-    bi to morda bilo nadvse enkratno. Vrstni red zgodb je naključen. Če verjameš v naključja. Na ključe in luči
-    pa le ne pozabi.">
+  <title>Tovarna sreče</title>
+  <meta name="description" content="S komolci sem se naslanjala na mizo in si s prsti pritiskala ob senca. [...]">
   <meta name="author" content="Tanja Špes">
-  <meta property="og:image" content="https://papirnatipticki.github.io/img/preview.jpg">
-  <meta property="og:image:width" content="980">
-  <meta property="og:image:height" content="626">
+  <meta property="og:image" content="https://papirnatipticki.github.io/img/zgodbe/nedalec-stran/tovarna-srece.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="600">
   <meta property="og:type" content="website">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -34,39 +32,38 @@
   <header id="story-header">
     <div class="container">
       <div id="story-header-grid" class="row">
-        <h1 id="story-title">Izberi in beri</h1>
-        <a id="story-back" href="/"><i class="material-icons">close</i></a>
+        <h1 id="story-title">Tovarna sreče</h1>
+        <a id="story-back" href="/zgodbe/nedalec-stran"><i class="material-icons">close</i></a>
       </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="bar"></div>
     </div>
   </header>
 
   <main id="story-main">
     <div class="container">
-      <section class="grid-pick">
-        <div class="row">
-          <div class="one-third column">
-            <a href="/zgodbe/nedalec-stran" class="grid-item">
-              <img src="/img/zgodbe/nedalec-stran.jpg" alt="Nedaleč stran">
-              <div class="story-title">Nedaleč stran</div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/cvetovi" class="grid-item">
-              <img src="/img/zgodbe/cvetovi.jpg" alt="Cvetovi">
-              <div class="story-title">Cvetovi</div>
-              <div class="tooltip">
-                <div class="tooltip-text">Pozor! Večina zgodb, ki sledijo, ni urejenih (razlog: raje se posvečam zgodbam iz kategorije Svetovi).<br><br>Branje na lastno odgovornost.</div>
-              </div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/svetovi" class="grid-item">
-              <img src="/img/zgodbe/svetovi.jpg" alt="Svetovi">
-              <div class="story-title">Svetovi</div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <div class="row">
+        <article>
+          <p>
+            S komolci sem se naslanjala na mizo in si s prsti pritiskala ob senca. Že tako je bilo dela veliko, vse
+            odkar so razglasili epidemijo, ki ji ni videti konca, pa so se sporočila na ekranu pred mano nenehno
+            kopičila. Če bi jih sproti pisala na samolepilne lističe, »naredi to in ono«, bi prekrivali ves moj del
+            pisarne in mene v njem. Pritisnila sem tipko za izklop in stopila do sodelavca.
+          </p>
+          <p>
+            Za razliko od mene, ki sem za učinkovito delo potrebovala tišino, njega prižgan radio ni motil.
+            »Bi šel na kavo?« sem ga vprašala.
+          </p>
+          <p>
+            Ne da bi me pogledal in prekinil tipkanje, je odkimal. »Ne vem, kako si lahko privoščiš odmor.«
+          </p>
+          <h5 class="tbc tbc-top">Se nadaljuje ...</h5>
+          <h4 class="tbc"><a href="https://www.mladinska-knjiga.si/knjige/leposlovje/nedalec-stran" target="_blank"
+              class="book-link book-link-story">Nedaleč stran <i class="material-icons">open_in_new</i></a>
+          </h4>
+        </article>
+      </div>
     </div>
   </main>
 
@@ -74,7 +71,8 @@
     <div class="container">
       <div class="row">
         <div class="twelve columns socials">
-          <a href="https://www.instagram.com/ostanjadoma/" target="_blank"><img src="/img/instagram.png" class="icon"></a>
+          <a href="https://www.instagram.com/ostanjadoma/" target="_blank"><img src="/img/instagram.png"
+              class="icon"></a>
         </div>
       </div>
     </div>
@@ -125,7 +123,15 @@
 
   <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="/js/script.js"></script>
-
+  <script>
+    window.onscroll = function () { scrollIndicator() };
+    function scrollIndicator() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("bar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 
 </html>

@@ -12,14 +12,13 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papirnati ptički</title>
-  <meta name="description" content="Pred tabo se nahajajo kratke zgodbe, ki po letih gnezdenja čakajo, da poletijo. Seveda ne vse naenkrat, čeprav
-    bi to morda bilo nadvse enkratno. Vrstni red zgodb je naključen. Če verjameš v naključja. Na ključe in luči
-    pa le ne pozabi.">
+  <title>Gospodinja</title>
+  <meta name="description"
+    content="V sobi ni bilo vroče, bilo je soparno. Vročina je bila znosna, sopara pač ne. [...]">
   <meta name="author" content="Tanja Špes">
-  <meta property="og:image" content="https://papirnatipticki.github.io/img/preview.jpg">
-  <meta property="og:image:width" content="980">
-  <meta property="og:image:height" content="626">
+  <meta property="og:image" content="https://papirnatipticki.github.io/img/zgodbe/nedalec-stran/gospodinja.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="800">
   <meta property="og:type" content="website">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -34,39 +33,39 @@
   <header id="story-header">
     <div class="container">
       <div id="story-header-grid" class="row">
-        <h1 id="story-title">Izberi in beri</h1>
-        <a id="story-back" href="/"><i class="material-icons">close</i></a>
+        <h1 id="story-title">Gospodinja</h1>
+        <a id="story-back" href="/zgodbe/nedalec-stran"><i class="material-icons">close</i></a>
       </div>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="bar"></div>
     </div>
   </header>
 
   <main id="story-main">
     <div class="container">
-      <section class="grid-pick">
-        <div class="row">
-          <div class="one-third column">
-            <a href="/zgodbe/nedalec-stran" class="grid-item">
-              <img src="/img/zgodbe/nedalec-stran.jpg" alt="Nedaleč stran">
-              <div class="story-title">Nedaleč stran</div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/cvetovi" class="grid-item">
-              <img src="/img/zgodbe/cvetovi.jpg" alt="Cvetovi">
-              <div class="story-title">Cvetovi</div>
-              <div class="tooltip">
-                <div class="tooltip-text">Pozor! Večina zgodb, ki sledijo, ni urejenih (razlog: raje se posvečam zgodbam iz kategorije Svetovi).<br><br>Branje na lastno odgovornost.</div>
-              </div>
-            </a>
-          </div>
-          <div class="one-third column">
-            <a href="/zgodbe/svetovi" class="grid-item">
-              <img src="/img/zgodbe/svetovi.jpg" alt="Svetovi">
-              <div class="story-title">Svetovi</div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <div class="row">
+        <article>
+          <p>
+            V sobi ni bilo vroče, bilo je soparno. Vročina je bila znosna, sopara pač ne. Ventilator na stropu se je
+            neutrudno vrtel in prispeval svoj glas k zboru zvokov iz televizorja, ki je metal medlo svetlobo in verjetno
+            ne bi žarel svetleje, tudi če bi mu kdo posvečal več pozornosti. Dora se je nemirno premetavala v postelji,
+            pri čemer jo je oviral napet trebuh. Vse odkar je izvedela, da v svojem telesu ne živi več sama, je nekaj v
+            njej umrlo in vse težje je našla voljo, da se premakne.
+          </p>
+          <p>
+            »Res ne razumem, kaj te tako skrbi. Ti si pametna, jaz sem pameten, tudi otrok bo pameten,« ji je Trivan
+            prigovarjal z optimizmom in nasmehom.
+          </p>
+          <p>
+            Ko se ni odzvala, je zaigrano sumničavo dodal: »Razen, če ni moj?«
+          </p>
+          <h5 class="tbc tbc-top">Se nadaljuje ...</h5>
+          <h4 class="tbc"><a href="https://www.mladinska-knjiga.si/knjige/leposlovje/nedalec-stran" target="_blank"
+              class="book-link book-link-story">Nedaleč stran <i class="material-icons">open_in_new</i></a>
+          </h4>
+        </article>
+      </div>
     </div>
   </main>
 
@@ -74,7 +73,8 @@
     <div class="container">
       <div class="row">
         <div class="twelve columns socials">
-          <a href="https://www.instagram.com/ostanjadoma/" target="_blank"><img src="/img/instagram.png" class="icon"></a>
+          <a href="https://www.instagram.com/ostanjadoma/" target="_blank"><img src="/img/instagram.png"
+              class="icon"></a>
         </div>
       </div>
     </div>
@@ -125,7 +125,15 @@
 
   <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="/js/script.js"></script>
-
+  <script>
+    window.onscroll = function () { scrollIndicator() };
+    function scrollIndicator() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById("bar").style.width = scrolled + "%";
+    }
+  </script>
 </body>
 
 </html>
